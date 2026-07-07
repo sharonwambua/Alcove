@@ -1,0 +1,81 @@
+:root {
+  /* Core Palette Matrix */
+  --background: #F9F6F0;     /* Soft Canvas Nude */
+  --surface: #FFFFFF;        /* Crisp Pure White */
+  --border: #E6DFD3;         /* Muted Nude Tone for Clean Lines */
+  
+  /* Primary Branding Colors */
+  --primary: #8C6239;        /* Warm Nude Earth Brown */
+  --primary-hover: #6F4E2D;  /* Rich Darker Brown for Hover States */
+  
+  /* Text Profiles */
+  --text: #1A1A1A;           /* Deep Obsidian Black for Crisp Readability */
+  --text-muted: #7A7265;     /* Soft Ash Brown for Subtitles & Logs */
+  
+  /* Action / Exception Statuses */
+  --danger: #C0392B;         /* Crimson Red for alerts/overdue cycles */
+  --success: #2E7D32;        /* Forest Emerald for paid items */
+  --warning: #D35400;        /* Burnt Amber for pending notices */
+  
+  /* Border Radius & Depth Shadows */
+  --radius: 8px;
+  --shadow: 0 4px 12px rgba(26, 26, 26, 0.05);
+}
+
+/* Global resets to align typography perfectly to the new palette */
+body {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font);
+  background-color: var(--background);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font);
+  transition: all 0.2s ease;
+}
+
+input, select, textarea {
+  font-family: var(--font);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.5rem 0.75rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--primary);
+}
+
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background);
+  padding: 1rem;
+}
+
+.auth-card {
+  background: var(--surface);
+  padding: 2.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  width: 100%;
+  max-width: 450px;
+}
